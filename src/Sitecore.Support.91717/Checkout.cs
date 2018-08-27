@@ -11,10 +11,6 @@ namespace Sitecore.Support.Shell.Framework.Commands
       {
         return CommandState.Hidden;
       }
-      if (Context.IsAdministrator)
-      {
-        return CommandState.Enabled;
-      }
       var item = context.Items[0];
       if (item.Locking.IsLocked())
       {
